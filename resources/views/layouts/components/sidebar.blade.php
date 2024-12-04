@@ -49,7 +49,6 @@
             <p class="text-muted mb-0">Admin Head</p>
         </div>
 
-        <!--- Menu -->
         @switch(Auth::user()->rol_id)
             @case(1)
                 @include('layouts.components.menu.admin')

@@ -31,7 +31,7 @@ header {
             hsla(192, 28%, 21%, 0.404),
             hsla(0, 18%, 88%, 0.411)
         ),
-        url(/images/2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        url(/images/FondoLogin.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     background-size: cover;
     background-attachment: fixed;

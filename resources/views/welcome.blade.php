@@ -5,108 +5,108 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistematic Cutex</title>
+  <title>Peletería Cueros y Color</title>
   <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon" />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@300;400;700&family=Roboto:ital,wght@1,900&family=Square+Peg&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Open+Sans:wght@300;400;700&family=Roboto:ital,wght@1,900&family=Square+Peg&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="#Nosotros">Nosotros</a>
-      <a href="#Contacto">Contáctanos</a>
-      <a href="{{ route('login') }}">Iniciar sesión</a>
+  <!-- Header with navigation -->
+  <header class="bg-dark text-white py-5">
+    <nav class="container d-flex justify-content-between align-items-center">
+      <a href="#" class="text-white logo">NGBJ_INVETARIOS</a>
+      <div>
+        <a href="#Nosotros" class="text-white mx-3">Información</a>
+        <a href="#Contacto" class="text-white mx-3">Contáctanos</a>
+        <a href="{{ route('login') }}" class="btn btn-light">Iniciar sesión</a>
+      </div>
     </nav>
-    <section class="textos-header">
-      <h1>Somos creadores de los mejores articulos en cuero</h1>
+    <section class="text-center my-5">
+      <h1 class="display-4">Creadores de los mejores sistemas de inventario</h1>
+      <p class="lead">Proyeccion y modernidad colombiana</p>
     </section>
-    <div class="wave" style="height: 150px; overflow: hidden">
-      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%">
-        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff"></path>
-      </svg>
-    </div>
   </header>
+
+  <!-- Main content -->
   <main>
-    <div class="nosotros">
-      <h1 class="texto-nosotros">Bienvenidos a Peleteria Cueros y Color </h1>
-      <h1 class="texto-nosotros">Somos lujo Colombiano</h1>
-      <div class="tarjetas">
-        <div class="tarjeta">
-          <div class="contenedor-tarjeta">
-            <h4>Misión</h4>
-            <p>
-              Ser la referencia global en la creación de productos en cuero, fusionando tradición e innovación para inspirar el estilo de vida sofisticado y auténtico de nuestros clientes.
-            </p>
-          </div>
+  <!-- About us section -->
+  <section id="Nosotros" class="container py-5">
+    <h2 class="text-center mb-4">Bienvenidos a Peletería Cueros y Color</h2>
+    <p class="lead text-center">Somos lujo colombiano, fusionando tradición e innovación.</p>
+    <!-- ... (Tu contenido de la sección "Nosotros") ... -->
+  </section>
+
+  <!-- Request Information Form Section -->
+  <section id="SolicitarInformacion" class="container py-5">
+    <h2 class="text-center mb-4">Solicita Más Información</h2>
+    <p class="lead text-center mb-5">Déjanos tus datos y nos pondremos en contacto contigo.</p>
+    
+    <form action="{{ route('send.inf') }}" method="POST">
+      @csrf <!-- Si estás usando Laravel, esta línea es necesaria para la protección CSRF -->
+      
+      <div class="row">
+        <!-- Nombre -->
+        <div class="col-md-6 mb-4">
+          <label for="nombre" class="form-label">Nombre Completo</label>
+          <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Ingresa tu nombre completo">
         </div>
-        <div id="Nosotros" class="tarjeta">
-          <div class="contenedor-tarjeta">
-            <h4>Visión</h4>
-            <p>
-              "Nuestra misión es articular la elegancia y durabilidad del cuero en productos excepcionales, comprometiéndonos a ofrecer calidad insuperable, diseños vanguardistas y satisfacción total a nuestros clientes, respaldados por un enfoque constante en la excelencia artesanal y la innovación continua.
-            </p>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div class="tarjetas">
-        <div class="tarjeta">
-          <div class="contenedor-tarjeta">
-            <h4>Calidad</h4>
-            <p>
-              Nos comprometemos a garantizar la excelencia en cada detalle, seleccionando los mejores materiales y aplicando una artesanía meticulosa para ofrecer productos en cuero que perduren en el tiempo, reflejando nuestra búsqueda inquebrantable de la máxima calidad y satisfacción del cliente.
-            </p>
-          </div>
-        </div>
-        <div class="tarjeta">
-          <div class="contenedor-tarjeta">
-            <h4>Puntualidad</h4>
-            <p>
-              Nuestra puntualidad es un valor fundamental; nos esforzamos por cumplir con los plazos de entrega de manera precisa y confiable, asegurando que nuestros clientes disfruten de sus productos en cuero a tiempo, reflejando nuestro compromiso con la confianza y satisfacción del cliente.
-            </p>
-          </div>
-        </div>
-        <div class="tarjeta">
-          <div class="contenedor-tarjeta">
-            <h4>Innovación</h4>
-            <p>
-              Abrazamos la innovación como motor de nuestro progreso, fusionando la rica tradición del cuero con soluciones vanguardistas. A través de la investigación constante y el diseño creativo, llevamos la innovación al corazón de nuestros productos en cuero, para superar las expectativas de nuestros clientes y liderar la evolución de la industria.
-            </p>
-          </div>
+
+        <!-- Correo Electrónico -->
+        <div class="col-md-6 mb-4">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" id="email" name="email" class="form-control" required placeholder="Ingresa tu correo electrónico">
         </div>
       </div>
-    </div>
-  </main>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <footer>
-    <div id="Contacto"class="contenedor-footer">
-      <div class="contenedor-foot">
-        <h4>Email:</h4>
-        <p>peleteria@gmail.com</p>
+
+      <div class="row">
+        <!-- Teléfono -->
+        <div class="col-md-6 mb-4">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="text" id="telefono" name="telefono" class="form-control" required placeholder="Ingresa tu número de teléfono">
+        </div>
+
+        <!-- Mensaje -->
+        <div class="col-md-6 mb-4">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required placeholder="Escribe tu mensaje aquí"></textarea>
+        </div>
       </div>
-      <div class="contenedor-foot">
-        <h4>Cel:</h4>
-        <p>3134528956</p>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
       </div>
-      <div class="contenedor-foot">
-        <h4>Dirección:</h4>
-        <p>Calle 12 # 23-34 Restrepo, Bogota D.C</p>
+    </form>
+  </section>
+</main>
+
+  <!-- Contact section -->
+  <footer id="Contacto" class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Email:</h4>
+          <p>Inventarios@ngbj.com</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Cel:</h4>
+          <p>3134528956</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Dirección:</h4>
+          <p>Calle 12 # 23-34 Restrepo, Bogotá D.C</p>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>&copy; 2024 NGBJ_inventarios. Todos los derechos reservados.</p>
       </div>
     </div>
-    <h2 class="titulo-final">&copy; Sistematic Cutex</h2>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
