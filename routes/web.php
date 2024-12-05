@@ -11,6 +11,7 @@ use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\InfoController;
 
 
 /*
@@ -160,4 +161,6 @@ Route::middleware([
     //Notificaciones
     Route::get('notificaciones', [NotificationController::class, 'index'])->name('notificaciones');
     Route::get('notificaciones/contar', [NotificationController::class, 'count'])->name('notificaciones.contar');
+
+    Route::post('/info', [InfoController::class, 'store'])->name('send.inf');
 });

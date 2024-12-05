@@ -32,13 +32,6 @@
 
   <!-- Main content -->
   <main>
-  <!-- About us section -->
-  <section id="Nosotros" class="container py-5">
-    <h2 class="text-center mb-4">Bienvenidos a Peletería Cueros y Color</h2>
-    <p class="lead text-center">Somos lujo colombiano, fusionando tradición e innovación.</p>
-    <!-- ... (Tu contenido de la sección "Nosotros") ... -->
-  </section>
-
   <!-- Request Information Form Section -->
   <section id="SolicitarInformacion" class="container py-5">
     <h2 class="text-center mb-4">Solicita Más Información</h2>
@@ -49,13 +42,13 @@
       
       <div class="row">
         <!-- Nombre -->
-        <div class="col-md-6 mb-4">
+        <div class="col-12 mb-4">
           <label for="nombre" class="form-label">Nombre Completo</label>
           <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Ingresa tu nombre completo">
         </div>
 
         <!-- Correo Electrónico -->
-        <div class="col-md-6 mb-4">
+        <div class="col-12 mb-4">
           <label for="email" class="form-label">Correo Electrónico</label>
           <input type="email" id="email" name="email" class="form-control" required placeholder="Ingresa tu correo electrónico">
         </div>
@@ -63,13 +56,13 @@
 
       <div class="row">
         <!-- Teléfono -->
-        <div class="col-md-6 mb-4">
+        <div class="col-12 mb-4">
           <label for="telefono" class="form-label">Teléfono</label>
           <input type="text" id="telefono" name="telefono" class="form-control" required placeholder="Ingresa tu número de teléfono">
         </div>
 
         <!-- Mensaje -->
-        <div class="col-md-6 mb-4">
+        <div class="col-12 mb-4">
           <label for="mensaje" class="form-label">Mensaje</label>
           <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required placeholder="Escribe tu mensaje aquí"></textarea>
         </div>
@@ -82,6 +75,7 @@
     </form>
   </section>
 </main>
+
 
   <!-- Contact section -->
   <footer id="Contacto" class="bg-dark text-white py-5">
