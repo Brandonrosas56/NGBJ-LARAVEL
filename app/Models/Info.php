@@ -9,6 +9,6 @@ class Info extends Model
 {
     use HasFactory;
 
-    protected $table = 'informacion_solicitada';
+    protected $table = 'info';
     protected $fillable = ['nombre', 'email', 'telefono', 'mensaje'];
 }

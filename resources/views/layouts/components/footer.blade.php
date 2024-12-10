@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <div>2023 © SENA</div>
+                <div>2025 © NGBJ_INVENTARIOS</div>
             </div>
         </div>
     </div>

@@ -16,12 +16,12 @@ class UsersTableSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'Katerine',
-                'surname' => 'Ordoñez',
-                'document_number' => '1083814056',
-                'address' => 'Calle 45 Cra12 # 12-78',
+                'name' => 'Naime',
+                'surname' => 'Montoya',
+                'document_number' => '1010900345',
+                'address' => 'Calle 45 # 22 a - 54',
                 'cellphone' => '3124314528',
-                'email' => 'ko@gmail.com',
+                'email' => 'na@gmail.com',
                 'gender' => 'femenino',
                 'document_id' => '1',
                 'rol_id' => '1',
@@ -31,12 +31,12 @@ class UsersTableSeeder extends Seeder
 
 
             [
-                'name' => 'Carlos',
-                'surname' => 'Lopez',
+                'name' => 'Guillermo',
+                'surname' => 'Alba',
                 'document_number' => '1083814045',
-                'address' => 'Calle 45 Cra12 # 12-78',
+                'address' => 'Cra 106 b # 74 - 58',
                 'cellphone' => '3124314512',
-                'email' => 'cl@gmail.com',
+                'email' => 'gu@gmail.com',
                 'gender' => 'masculino',
                 'document_id' => '2',
                 'rol_id' => '2',
@@ -44,58 +44,18 @@ class UsersTableSeeder extends Seeder
                 'password' => 'prueba123'
             ],
             [
-                'name' => 'Samanta',
-                'surname' => 'Herrera',
+                'name' => 'Jean',
+                'surname' => 'Gomez',
                 'document_number' => '1083814089',
-                'address' => 'Calle 45 Cra12 # 12-78',
+                'address' => 'TV 41 # 84 - 52',
                 'cellphone' => '3124314556',
-                'email' => 'sh@gmail.com',
-                'gender' => 'femenino',
-                'document_id' => '3',
-                'rol_id' => '3',
-                'company_id' => '1',
-                'password' => 'prueba123'
-            ],
-            [
-                'name' => 'Sebastian',
-                'surname' => 'Caicedo',
-                'document_number' => '10014068975',
-                'address' => 'Calle 45 Cra12 # 12-78',
-                'cellphone' => '31243145296',
-                'email' => 'sc@gmail.com',
-                'gender' => 'masculino',
-                'document_id' => '1',
-                'rol_id' => '1',
-                'company_id' => '1',
-                'password' => 'prueba123'
-            ],
-            [
-                'name' => 'Elena',
-                'surname' => 'Sandobal Peña',
-                'document_number' => '1004415278',
-                'address' => 'Calle 45 Cra12 # 12-78',
-                'cellphone' => '3137256892',
-                'email' => 'esp@gmail.com',
-                'gender' => 'femenino',
-                'document_id' => '2',
-                'rol_id' => '2',
-                'company_id' => '1',
-                'password' => 'prueba123'
-            ],
-            [
-                'name' => 'Santiago',
-                'surname' => 'Alarcon',
-                'document_number' => '1083812659',
-                'address' => 'Calle 45 Cra12 # 12-78',
-                'cellphone' => '3124311235',
-                'email' => 'as@gmail.com',
+                'email' => 'je@gmail.com',
                 'gender' => 'masculino',
                 'document_id' => '3',
                 'rol_id' => '3',
                 'company_id' => '1',
                 'password' => 'prueba123'
-            ]
-
+            ],
         ];
         foreach ($users as $user) {
             User::create([

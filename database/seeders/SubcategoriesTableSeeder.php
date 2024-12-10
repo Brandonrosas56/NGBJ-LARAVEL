@@ -15,39 +15,31 @@ class SubcategoriesTableSeeder extends Seeder
     {
         $subcategories = [
             [
-                'name' => 'Correas',
-                'category_id' => '1'
+                'name' => 'Paquetes',
             ],
             [
-                'name' => 'Billeteras',
-                'category_id' => '1'
+                'name' => 'Gaseosas',
             ],
             [
-                'name' => 'Correas',
-                'category_id' => '2'
+                'name' => 'Jugos',
             ],
             [
-                'name' => 'Billeteras',
-                'category_id' => '2'
+                'name' => 'Dulces',
             ],
             [
-                'name' => 'Bolsos',
-                'category_id' => '1'
+                'name' => 'Enlatados',
             ],
             [
-                'name' => 'Bolsos',
-                'category_id' => '2'
+                'name' => 'Galletas',
             ],
             [
-                'name' => 'Cueros y pieles',
-                'category_id' => '3'
+                'name' => 'Agua',
             ],
 
         ];
         foreach ($subcategories as $subcategory) {
             Subcategory::create([
                 'name' => $subcategory['name'],
-                'category_id' => $subcategory['category_id'],
             ]);
         }
     }

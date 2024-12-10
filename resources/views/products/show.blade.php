@@ -34,10 +34,6 @@
                                 <td>{{ $product->price }}</td>
                             </tr>
                             <tr>
-                                <th>Medida en pies (cueros y pieles)</th>
-                                <td>{{ $product->measure }}</td>
-                            </tr>
-                            <tr>
                                 <th>Compañia</th>
                                 <td>
                                     @foreach($companies as $company)
@@ -53,16 +49,6 @@
                                     @foreach($providers as $provider)
                                         @if($product->provider_id == $provider->id)
                                             {{ $provider->business_name }}
-                                        @endif
-                                    @endforeach
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Color</th>
-                                <td>
-                                    @foreach($colors as $color)
-                                        @if($color->color_id == $color->id)
-                                            {{ $color->name }}
                                         @endif
                                     @endforeach
                                 </td>

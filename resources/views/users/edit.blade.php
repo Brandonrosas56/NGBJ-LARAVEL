@@ -79,12 +79,12 @@
                                             <td><input type="password" class="form-control"name="password" value="{{ $user->password }}"></td>
                                         </tr> 
                                         <tr>
-                                            <th>Género <b style="color:red">*</b> </th>
+                                            <th>Género <b style="color:red">*</b></th>
                                             <td>
-                                                <select name="gender" class="form-control">
-                                                    <option value="gender">Seleccionar...</option>
-                                                    <option value="masculino">Masculino</option>
-                                                    <option value="femenino">Femenino</option>
+                                                <select name="gender" class="form-control" required>
+                                                    <option value="" disabled>Seleccionar...</option>
+                                                    <option value="masculino" @if($user->gender == 'masculino') selected @endif>Masculino</option>
+                                                    <option value="femenino" @if($user->gender == 'femenino') selected @endif>Femenino</option>
                                                 </select>
                                             </td>
                                         </tr>                         

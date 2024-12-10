@@ -29,7 +29,7 @@ class InfoController extends Controller
         ]);
 
         // Redirigimos con un mensaje de éxito
-        return redirect()->route('')
-                         ->with('success', '¡Tu solicitud ha sido enviada con éxito!');
+        return redirect('/');
+
     }
 }

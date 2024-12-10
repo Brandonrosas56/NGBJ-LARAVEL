@@ -21,21 +21,7 @@ return new class extends Migration
                 ->references('id')
                 ->on('documents');
         });
-        /*
-         *
-         * Tabla Su
-         * 
-         
-         
-         bcategoria
-         */
-
-        Schema::table('subcategories', function (Blueprint $table) {
-            $table
-                ->foreign('category_id')
-                ->references('id')
-                ->on('categories');
-        });
+        
         /*
          *
          * Tabla Usuarios
@@ -67,10 +53,6 @@ return new class extends Migration
                 ->foreign('provider_id')
                 ->references('id')
                 ->on('providers');
-            $table
-                ->foreign('color_id')
-                ->references('id')
-                ->on('colors');
             $table
                 ->foreign('subcategory_id')
                 ->references('id')

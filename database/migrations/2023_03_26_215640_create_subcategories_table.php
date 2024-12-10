@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name', 125)->comment('Nombre de la subcategoría');
             $table->enum('status', ["active", "inactive"])->default("active")->comment('Estado de la subcategoría');
             //Declaración llave foranea
-            $table->bigInteger('category_id')->unsigned()->comment('Relación de la tabla subcategorías con la tabla categorías');
             $table->softDeletes();
             $table->timestamps();
         });

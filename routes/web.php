@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProvidersController;
-use App\Http\Controllers\ColorsController;
 use App\Http\Controllers\InvoicesController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UsersController;
@@ -27,6 +26,7 @@ use App\Http\Controllers\InfoController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
+Route::post('/info', [InfoController::class, 'store'])->name('send.inf');;
 
 
 //loguin and register
@@ -138,21 +138,7 @@ Route::middleware([
 
     //Colores
     //Listar colores
-    Route::get('colores', [ColorsController::class, 'index'])->name('colores');
-    //Crear Color
-    Route::get('colores/crear', [ColorsController::class, 'create'])->name('colores.crear');
-    //Guardar Color
-    Route::post('colores', [ColorsController::class, 'store'])->name('colores.guardar');
-    //Eliminar Color
-    Route::delete('colores/{id}', [ColorsController::class, 'destroy'])->name('colores.eliminar');
-    //Detalles Color
-    Route::get('colores/{id}', [ColorsController::class, 'show'])->name('colores.detalles');
-    //Editar Color
-    Route::get('colores/{id}/editar', [ColorsController::class, 'edit'])->name('colores.editar');
-    //Actualizar Color
-    Route::put('colores/{id}', [ColorsController::class, 'update'])->name('colores.actualizar');
-    //Actualizar status Color
-    Route::put('colores-status/{id}', [ColorsController::class, 'editStatus'])->name('colores.estado');
+
 
     //Reportes
     Route::get('reportes', [ReportsController::class, 'index'])->name('reportes');
@@ -162,5 +148,5 @@ Route::middleware([
     Route::get('notificaciones', [NotificationController::class, 'index'])->name('notificaciones');
     Route::get('notificaciones/contar', [NotificationController::class, 'count'])->name('notificaciones.contar');
 
-    Route::post('/info', [InfoController::class, 'store'])->name('send.inf');
+
 });

@@ -15,23 +15,13 @@ class CompaniesTableSeeder extends Seeder
     {
         $companies = [
             [
-                'name' => 'Peleteria Cueros y Color',
+                'name' => 'DISTRIBUIDORA J.A',
                 'nit' => '108381256978',
                 'owner_name' => 'Yaneth Ortiz',
                 'date_fundation' => '2000-02-06',
-                'email' => 'peleteriacueros@gmail.com',
+                'email' => 'distribuidorja@gmail.com',
                 'address' => 'Calle 123 Cra12 # 12-78',
                 'cellphone' => '3124568974',
-            ],
-            [
-                'name' => 'Peleteria 2',
-                'nit' => '108381256',
-                'owner_name' => 'Yaneth Ortiz',
-                'date_fundation' => '2012-02-06',
-                'email' => 'peleteria2@gmail.com',
-                'address' => 'Calle 13 Cra12 # 12-78',
-                'cellphone' => '3124568956',
-
             ]
         ];
         foreach ($companies as $company) {

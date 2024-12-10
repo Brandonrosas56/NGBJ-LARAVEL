@@ -25,12 +25,4 @@
             <span class="menu-text">Facturas </span>
         </a>
     </li>
-    <li class="menu-item">
-        <a href="{{ route("reportes") }}" class="menu-link">
-            <span class="menu-icon"><i class="fa-solid fa-chart-line"></i></span>
-            <span class="menu-text"> Reportes </span>
-        </a>
-    </li>
-
-
 </ul>

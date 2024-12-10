@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <div class="d-flex flex-column align-items-center justify-content-center py-2">
         <a href="index.html" class="logo-dark">
-            <img src="{{ url('images/logo.jpg')}}" alt="dark logo sdfsdfsdfdsdfsdfsdfdsfsdf" width="100" height="100">
+            <img src="{{ url('images/logo.jpg')}}" alt="dark logo sdfsdfsdfdsdfsdfsdfdsfsdf" width="200" height="100">
         </a>
         <div class="mt-10">
             <h5> {{ Auth::user()->name }}</h5>

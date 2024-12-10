@@ -38,7 +38,6 @@
                                 <tr>
 
                                     <th></th>
-                                    <th>Imagen</th>
                                     <th>Nombre producto</th>
                                     <th>Cantidad disponible</th>
                                     <th>Referencia</th>
@@ -53,7 +52,6 @@
                                 @foreach ($products as $product)
                                     <tr>
                                         <td> {{ $product->id }}</td>
-                                        <td> <img height="100" width="100" src="{{ asset($product->photo) }}" alt=""> </td>
                                         <td class="table-user">
                                             <a href="{{ route('productos.detalles', $product->id) }}"
                                                 class="text-body fw-semibold">{{ $product->name }}</a>
@@ -204,10 +202,6 @@
                             <input type="number" class="form-control" name="price" required>
                         </div>
                         <div class="col-6 mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Medida en pies (cueros y pieles) <b style="color:red">*</b></label>
-                            <input type="number" class="form-control" name="measure" required>
-                        </div>
-                        <div class="col-6 mb-3">
                             <label for="name" class="form-label">Compañia <b style="color:red">*</b> </label>
                             <select name="company_id" id="" class="form-select">
                                 <option value="">Seleccionar...</option>
@@ -226,16 +220,6 @@
                             </select>
                         </div>
                         <div class="col-6 mb-3">
-                            <label for="name" class="form-label">Color <b style="color:red">*</b> </label>
-                            <select name="color_id" id="" class="form-select">
-                                <option value="">Seleccionar...</option>
-                                @foreach ($colors as $color)
-                                    <option value="{{ $color->id }}">{{ $color->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                     
-                        <div class="col-6 mb-3">
                             <label for="name" class="form-label">Subcategoria <b style="color:red">*</b> </label>
                             <select name="subcategory_id" id="" class="form-select">
                                 <option value="">Seleccionar...</option>
@@ -243,10 +227,6 @@
                                     <option value="{{ $subcategory->id }}">{{ $subcategory->name }} - {{ $subcategory-> categoryName }}</option>
                                 @endforeach
                             </select>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="image" class="form-label">Imagen <b style="color:red">*</b></label>
-                            <input type="file" class="form-control" name="file" required>
                         </div>
                     </div>
                     <div class="text-end">

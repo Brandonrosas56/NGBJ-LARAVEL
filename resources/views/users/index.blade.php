@@ -60,16 +60,7 @@
                                                 @endif
                                             @endforeach
 
-                                            @canBeImpersonated($user, $guard = null)
-                                            <a class="btn btn-info btn-xs" href="{{ route('impersonate', $user->id) }}"><i class="fa fa-user"></i></a>
-                                            @endCanBeImpersonated
-                                        
-                                            {{-- iv class="text-left">
-                                                <form action="{{ route('impersonar.comenzar', compact('user')) }}" method="POST">
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-info btn-xs">Ver como</button>
-                                                </form>
-                                            </> --}}
+                                            
                                             
                                         
                                             

@@ -48,10 +48,6 @@
                                             <td><input type="number" class="form-control" name="price" value="{{ $product->price }}" required></td>
                                         </tr>
                                         <tr>
-                                            <th>Medida en pies (cueros y pieles) <b style="color:red">*</b> </th>
-                                            <td><input type="number" class="form-control" name="measure" value="{{ $product->measure }}" required></td>
-                                        </tr>
-                                        <tr>
                                             <th>Compañia <b style="color:red">*</b> </th>
                                             <td>
                                                 <select name="company_id" class="form-select">
@@ -73,17 +69,6 @@
                                                 </select>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th>Color <b style="color:red">*</b></th>
-                                            <td>
-                                                <select name="color_id" class="form-select">
-                                                    <option value="">Seleccionar...</option>
-                                                    @foreach($colors as $color)
-                                                        <option value="{{ $color->id }}" @if($product->color_id == $color->id) selected @endif>{{ $color->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </td>
-                                        </tr>
                                          <tr>
                                             <th>Subcategoria <b style="color:red">*</b></th>
                                             <td>
@@ -94,16 +79,7 @@
                                                     @endforeach
                                                 </select>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Imagen</th>
-                                            <td>
-                                                <img height="100" width="100" src="{{ asset($product->photo) }}" alt="">
-                                                <input type="file" class="form-control" name="file">
-                                
-                                            </td>
-                                        </tr>
-                                        
+                                        </tr>                                    
                                         <br>
                                         <br>
                                         <tr> 
