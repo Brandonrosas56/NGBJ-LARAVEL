@@ -50,6 +50,46 @@ class ProductsController extends Controller
         return view('products.index', compact('products', 'companies', 'providers', 'subcategories', 'users'));
     }
 
+    public function store(Request $request)
+    {
+        $reference = $request['reference'];
+
+        $exisProduct = Product::query()
+            ->where('reference', '=', $reference)
+            ->get();
+
+        if (count($exisProduct) > 0) {
+            session()->flash('error', 'Referencia ya registrada');
+            return redirect()->route('productos')->with('message', session('error'));
+        }
+        $ultimoId = Product::latest()->first()->id;
+
+    
+        $request['user_id'] = Auth::user()->id;
+        // Guarda un mensaje de éxito en la sesión
+        session()->flash('success', 'Producto creado correctamente');
+
+        $product = Product::create($request->all());
+
+        $users = User::all();
+        foreach ($users as $user) {
+            Notification::create([
+                'title' => 'Se ha creado un producto',
+                'message' => 'El usuario ' . Auth::user()->name . ' ha creado el producto ' . $request['name'],
+                'type' => 'product',
+                'reference' => $product['id'],
+                'user_id' => $user['id']
+            ]);
+        }
+        return redirect()->route('productos')->with('message', session('success'));
+    }
+    //Eliminar--> retorno vista proveedores
+    public function destroy($id)
+    {
+        Product::find($id)->delete();
+        return redirect()->route('productos');
+    }
+
     public function show($id)
     {
         $companies = Company::all();
