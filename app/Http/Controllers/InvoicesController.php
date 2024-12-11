@@ -36,8 +36,8 @@ class InvoicesController extends Controller
         $products = Product::query()
             ->leftJoin('details', 'details.product_id', '=', 'products.id')
             ->leftJoin('invoices', 'details.invoice_id', '=', 'invoices.id')
-            ->select('products.id', 'products.photo', 'products.name', 'products.reference', 'products.price', 'products.status', DB::raw('products.stock - SUM(IF(details.stock AND invoices.status = "active",details.stock,0)) as stockDetail'))
-            ->groupBy('products.id', 'products.photo', 'products.name', 'products.reference', 'products.price', 'products.status', 'details.product_id', 'products.stock')
+            ->select('products.id', 'products.name', 'products.reference', 'products.price', 'products.status', DB::raw('products.stock - SUM(IF(details.stock AND invoices.status = "active",details.stock,0)) as stockDetail'))
+            ->groupBy('products.id', 'products.name', 'products.reference', 'products.price', 'products.status', 'details.product_id', 'products.stock')
             ->where('products.status', '=', 'active')
             ->havingRaw('stockDetail > ?', [0])
             ->get();

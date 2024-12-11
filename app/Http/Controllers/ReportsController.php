@@ -41,13 +41,13 @@ class ReportsController extends Controller
         $totalVendidos = Product::query()
             ->leftJoin('details', 'details.product_id', '=', 'products.id')
             ->leftJoin('invoices', 'details.invoice_id', '=', 'invoices.id')
-            ->select('products.id', 'products.photo', 'products.name', 'products.stock', 'products.reference', 'products.price', 'products.status', DB::raw('SUM(IF(details.stock,details.stock,0)) as stockDetail'))
+            ->select('products.id',  'products.name', 'products.stock', 'products.reference', 'products.price', 'products.status', DB::raw('SUM(IF(details.stock,details.stock,0)) as stockDetail'))
             ->where('invoices.status', '=', 'active')
             ->whereDate('details.created_at', '>=', $fechaInicio)
             ->whereDate('details.created_at', '<=', $fechaFin)
             ->orderBy('stockDetail', 'desc')
             ->limit(5)
-            ->groupBy('products.id', 'products.photo', 'products.name', 'products.stock', 'products.reference', 'products.price', 'products.status', 'details.product_id')->get();
+            ->groupBy('products.id', 'products.name', 'products.stock', 'products.reference', 'products.price', 'products.status', 'details.product_id')->get();
 
         $totalProductos = DB::table('details')
             ->leftJoin('invoices', 'details.invoice_id', '=', 'invoices.id')
